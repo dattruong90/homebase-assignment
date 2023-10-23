@@ -30,8 +30,4 @@
 ## Prerequisites
 
 - [Node.js 18.18.2](https://www.npmjs.com/package/firebase-tools)
-- [Nx 17.0.0](https://nx.dev/getting-started/intro)
-    ```bash
-    npm install --g nx@latest
-    ```
 
