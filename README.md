@@ -30,4 +30,5 @@
 ## Prerequisites
 
 - [Node.js 18.18.2](https://www.npmjs.com/package/firebase-tools)
+- [Python 3.12.0](https://www.python.org/downloads/)
 
