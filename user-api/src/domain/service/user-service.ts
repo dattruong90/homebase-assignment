@@ -1,13 +1,13 @@
-import { UserEntity } from "../entity";
+import { CreateUserEntity, UpdateUserEntity, UserEntity } from "../entity";
 
 export interface UserService {
-  create(entity: UserEntity): Promise<UserEntity>;
+  create(entity: CreateUserEntity): Promise<UserEntity>;
 
   findOne(id: string): Promise<UserEntity>;
 
   find(): Promise<UserEntity[]>;
 
-  update(entity: UserEntity): Promise<void>;
+  update(entity: UpdateUserEntity): Promise<void>;
 
   delete(id: string): Promise<void>;
 }

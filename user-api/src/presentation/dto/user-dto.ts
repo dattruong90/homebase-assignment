@@ -12,4 +12,7 @@ export class UserDto {
 
   @Expose()
   readonly createdAt: Date
+
+  @Expose()
+  readonly modifiedAt: Date
 }

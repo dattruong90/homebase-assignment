@@ -7,7 +7,6 @@ export const controllerHandler =
   (req: Request, res: Response, next: NextFunction) => {
     Promise.resolve(fn(req, res))
       .then((data) => {
-        console.log(instanceToPlain(data))
         res.status(StatusCodes.OK).json(data)
       })
       .catch((error) => {

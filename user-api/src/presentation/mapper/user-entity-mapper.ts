@@ -1,15 +1,21 @@
 import { Request } from "express";
-import { CreateUserDto, UserDto } from "../dto";
-import { plainToInstance, instanceToPlain, plainToClass } from "class-transformer";
-import { UserEntity } from "../../domain/entity";
+import { CreateUserDto, UpdateUserDto, UserDto } from "../dto"
+import {
+  plainToInstance,
+} from "class-transformer"
+import {
+  CreateUserEntity,
+  UpdateUserEntity,
+  UserEntity,
+} from "../../domain/entity"
 
 export class UserEntityMapper {
-  fromCreateRequest(source: Request): UserEntity {
+  fromCreateRequest(source: Request): CreateUserEntity {
     const createUserDto = plainToInstance(CreateUserDto, source.body, {
       excludeExtraneousValues: true,
     })
 
-    return plainToInstance(UserEntity, createUserDto, {
+    return plainToInstance(CreateUserEntity, createUserDto, {
       excludeExtraneousValues: true,
     })
   }
@@ -22,6 +28,16 @@ export class UserEntityMapper {
 
   toFindResponse(source: UserEntity[]): UserDto[] {
     return plainToInstance(UserDto, source, {
+      excludeExtraneousValues: true,
+    })
+  }
+
+  fromUpdateRequest(source: Request): UpdateUserEntity {
+    const updateUserDto = plainToInstance(UpdateUserDto, source.body, {
+      excludeExtraneousValues: true,
+    })
+    
+    return plainToInstance(UpdateUserEntity, updateUserDto, {
       excludeExtraneousValues: true,
     })
   }

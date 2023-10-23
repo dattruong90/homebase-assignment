@@ -10,8 +10,8 @@ export class UserController {
   ) {}
 
   async create(req: Request, res: Response): Promise<UserDto> {
-    const userEntity = this.userEntityMapper.fromCreateRequest(req)
-    const result = await this.userService.create(userEntity)
+    const createUserEntity = this.userEntityMapper.fromCreateRequest(req)
+    const result = await this.userService.create(createUserEntity)
 
     return this.userEntityMapper.toCreateResponse(result);
   }
@@ -29,8 +29,9 @@ export class UserController {
   }
 
   async update(req: Request, res: Response): Promise<void> {
-    const createRequest = this.userEntityMapper.fromCreateRequest(req)
-    await this.userService.update(createRequest)
+    const updateUserEntity = this.userEntityMapper.fromUpdateRequest(req)
+
+    await this.userService.update(updateUserEntity)
   }
 
   async delete(req: Request, res: Response): Promise<void> {

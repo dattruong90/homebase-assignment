@@ -9,7 +9,7 @@ export const errorHandler = (
     res: Response,
     next: NextFunction
   ) => {
-    console.log("ERROR = " + err)
+    console.log(`RESPONSE ERROR = ${err}`)
 
     if (err instanceof BaseException) {
       res.status(err.statusCode).json({

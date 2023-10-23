@@ -1,9 +1,9 @@
 import { plainToInstance } from "class-transformer";
-import { UserEntity } from "../../../domain/entity";
+import { CreateUserEntity, UpdateUserEntity, UserEntity } from "../../../domain/entity";
 import { UserModel } from "../model";
 
 export class UserModelMapper {
-  fromCreateRequest(source: UserEntity): UserModel {
+  fromCreateRequest(source: CreateUserEntity): UserModel {
     return plainToInstance(UserModel, source, {
       excludeExtraneousValues: true,
     })
