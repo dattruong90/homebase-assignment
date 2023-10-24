@@ -11,19 +11,19 @@
 
 ## Completed Tasks
 
-- &#9745; API with Express and Node.js 
+- [x] API with Express and Node.js 
     - Create a simple REST API using Express.
     - Implement CRUD operations for a "User" resource.
-- &#9745; Web Server with Django and Python
+- [x] Web Server with Django and Python
     - Create a Django web server with one model, e.g., "Product".
     - Implement CRUD operations via Django's admin interface.
-- &#9745; API-to-Database Connection
+- [x] API-to-Database Connection
     - Connect your Express API to a SQLite database using any ORM.
     - Store and retrieve "User" data.
-- &#9745; API Proxy with Python
+- [x] API Proxy with Python
     - Create a Python script that acts as a proxy.
     - Forward requests from the Python script to the Express API.
-- &#9745; Integration
+- [x] Integration
     - Make the Django web server fetch "User" data from the Express API via the Python proxy.
 
 
