@@ -45,7 +45,7 @@ git clone https://github.com/dattruong90/homebase-assignment.git
 
 ### 2. Navigate to project
 
-- Service api-proxy
+- Service user-api
     ```bash
     cd user-api
     npm install
