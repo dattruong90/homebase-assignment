@@ -31,4 +31,28 @@
 
 - [Node.js 18.18.2](https://www.npmjs.com/package/firebase-tools)
 - [Python 3.12.0](https://www.python.org/downloads/)
+    ```bash
+    pip3 install pipenv
+    ```
+
+## Quick start
+
+### 1. Clone the repository
+
+```bash
+git clone git@gitlab.com:viva-dev/viva-grocery-client.git
+```
+
+### 2. Navigate to project
+
+```bash
+cd viva-grocery-client/
+```
+
+### 3. Install dependencies
+
+```bash
+melos bootstrap
+```
+
 
